@@ -18,44 +18,36 @@ h1 {
   padding-bottom: 15px;
 }
 
-header{
-
-    background-color: #5B88B2;
+header {
+  background-color: #5b88b2;
 }
 
-
-nav{
-
+nav {
   display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   padding: 5px 5px;
 }
 
-
 .linkss {
- 
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    gap: 20px; 
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .linkss a {
-
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
-
 
 .links:hover {
-    color: #d1e0f0;
+  color: #d1e0f0;
 }
-
 
 .link {
   color: rgb(252, 252, 252);
@@ -66,19 +58,20 @@ body {
   background-color: var(--crema);
 }
 
-main {
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 30px;
-}
-
+/*Sección Principal*/
 .principal {
   color: var(--crema);
   background-color: var(--azul);
   width: 100%;
-  padding: 30px;
-  height: 150px;
+  padding: 32px 0;
   text-align: center;
+}
+
+/*Main*/
+main {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 30px;
 }
 
 .flex-container {
@@ -95,6 +88,7 @@ main {
   padding: 30px;
   justify-content: center;
   border-radius: 20px;
+  flex: 1;
 }
 
 .custom-content:hover {
@@ -171,9 +165,7 @@ main {
   align-items: center;
 }
 
-
 .logo img {
-
   border: none;
 }
 
