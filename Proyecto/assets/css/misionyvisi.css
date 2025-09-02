@@ -1,3 +1,9 @@
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --crema: #fafbe4;
   --celeste: #5c84b3;
@@ -11,11 +17,13 @@ h3 {
 
 h2 {
   text-align: center;
+  font-family: "Shrikhand", serif;
 }
 
 h1 {
   text-align: center;
   padding-bottom: 15px;
+  font-family: "Shrikhand", serif;
 }
 
 header {
@@ -60,6 +68,7 @@ body {
 
 /*Sección Principal*/
 .principal {
+  font-family: "Shrikhand", serif;
   color: var(--crema);
   background-color: var(--azul);
   width: 100%;
