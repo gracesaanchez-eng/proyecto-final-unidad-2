@@ -1,5 +1,12 @@
+:root {
+  --crema: #fafbe4;
+  --celeste: #5c84b3;
+  --azul: #183055;
+  --oscuro-azul: #0b1726;
+}
+
 header {
-  background-color: #5b88b2;
+  background-color: var(--celeste);
 }
 
 .logo {
@@ -14,20 +21,111 @@ header {
 
 .linkss {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   list-style: none;
-  gap: 20px;
+  gap: 10px;
   margin: 0;
   padding: 0;
 }
 
 .linkss a {
-  color: #fff;
+  color: var(--crema);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .links:hover {
-  color: #d1e0f0;
+  color: var(--crema);
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    background-color: var(--celeste);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    max-height: 90px;
+    width: 120px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 1px 1px;
+    font-size: 17px;
+  }
+
+  main {
+    background-color: var(--crema);
+  }
+
+  .linkss {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .linkss a {
+    color: var(--crema);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .links:hover {
+    color: var();
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header {
+    background-color: var(--celeste);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo img {
+    max-height: 100px;
+    width: 130px;
+  }
+
+  nav {
+    display: block;
+    align-items: center;
+    padding: 1px 1px;
+    font-size: 17px;
+    text-align: center;
+  }
+  .linkss {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .linkss a {
+    color: var(--crema);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .links:hover {
+    color: var(--crema);
+  }
 }
