@@ -13,6 +13,7 @@ nav {
 
 header {
   background-color: var(--celeste);
+  font-size: 20px;
 }
 
 .logo {
