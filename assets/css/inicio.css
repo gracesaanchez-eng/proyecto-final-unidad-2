@@ -26,7 +26,9 @@ main {
 }
 
 img {
-  border-radius: 16px;
+  border-radius: 20px;
+  width: 500px;
+  margin-left: 200px;
 }
 
 .start {
