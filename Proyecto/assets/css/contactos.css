@@ -5,6 +5,12 @@
   --oscuro-azul: #0b1726;
 }
 
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   font-family: "Times New Roman", Times, serif;
   background-color: var(--crema);
