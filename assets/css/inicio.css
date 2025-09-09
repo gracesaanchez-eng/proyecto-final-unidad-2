@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman";
 }
 
 :root {
@@ -33,6 +32,16 @@ img {
 .start {
   font-size: larger;
   justify-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.principal {
+  color: var(--crema);
+  background-color: var(--azul);
+  width: 100%;
+  padding: 30px;
+  height: 150px;
   text-align: center;
 }
 
@@ -106,7 +115,7 @@ button:hover {
   button {
     display: flex;
     background-color: var(--oscuro-azul);
-    color: aliceblue;
+    color: var(--oscuro-azul);
     border: 0;
     padding: 10px;
   }
