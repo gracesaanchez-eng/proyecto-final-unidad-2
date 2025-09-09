@@ -5,6 +5,16 @@
   --oscuro-azul: #0b1726;
 }
 
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  font-family: "Libre Baskerville", serif;
+}
+
 nav {
   display: flex;
   align-items: center;

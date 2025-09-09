@@ -11,17 +11,26 @@
   font-style: normal;
 }
 
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h3 {
   text-align: center;
 }
 
 h2 {
   text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 23px;
 }
 
 h1 {
   text-align: center;
   font-family: "Shrikhand", serif;
+  font-size: 40px;
 }
 
 body {
