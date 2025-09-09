@@ -19,6 +19,8 @@ body {
   background-color: var(--crema);
   color: black;
   font-size: 20px;
+  margin: 0;
+  padding: 0; /* <-- Asegura que no haya padding */
 }
 
 #texto {
@@ -28,6 +30,12 @@ body {
   padding: 30px;
   height: 150px;
   text-align: center;
+  font-family: "Shrikhand", serif;
+  font-size: 50px;
+  margin: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: block; /* No uses flex aquí */
 }
 
 .relleno {
@@ -155,10 +163,31 @@ body {
   background-color: #c13535;
 }
 
+.subtitulo {
+  color: var(--azul);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.subtexto {
+  color: var(--crema);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
 @media (max-width: 768px) {
   #texto {
     font-size: 40px;
-    width: 95%;
+    width: 100%;
+    padding: 30px;
   }
   .container,
   .contenedor,
@@ -215,8 +244,8 @@ body {
     padding: 5px;
   }
   #texto {
-    font-size: 22px;
-    width: 95%;
+    font-size: 23px;
+    width: 100%;
     padding: 10px;
   }
   .relleno {
