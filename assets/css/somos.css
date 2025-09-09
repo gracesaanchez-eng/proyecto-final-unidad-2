@@ -20,7 +20,7 @@ body {
   color: black;
   font-size: 20px;
   margin: 0;
-  padding: 0; /* <-- Asegura que no haya padding */
+  padding: 0;
 }
 
 #texto {
@@ -35,7 +35,7 @@ body {
   margin: 0;
   border-radius: 0;
   box-sizing: border-box;
-  display: block; /* No uses flex aquí */
+  display: block;
 }
 
 .relleno {
@@ -45,54 +45,70 @@ body {
   text-align: justify;
   line-height: 1.6;
 }
-.container {
-  display: grid;
-  grid-template-columns: 200px auto;
-  background-color: var(--celeste);
-  text-align: justify;
-  color: var(--crema);
-  width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
+
+/* --- INTEGRANTES MODERNOS --- */
+.equipo {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 40px auto 30px auto;
+  flex-wrap: wrap;
+  max-width: 1200px;
 }
-.contenedor {
-  display: grid;
-  grid-template-columns: 200px auto;
+
+.integrante {
   background-color: var(--celeste);
-  text-align: justify;
-  color: var(--crema);
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
+  color: var(--azul); /* Letras azul oscuro */
+  width: 260px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 8px 32px rgba(24, 48, 85, 0.18);
+  transition: transform 0.25s cubic-bezier(.4, 2, .3, 1), box-shadow 0.25s;
+  will-change: transform;
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 24px 16px;
+  box-sizing: border-box;
+  border: 3px solid var(--oscuro-azul); /* Marco oscuro */
 }
-.tercero {
-  display: grid;
-  grid-template-columns: 200px auto;
-  background-color: var(--celeste);
-  text-align: justify;
-  color: var(--crema);
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
+
+.integrante:hover {
+  transform: translateY(-10px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 16px 40px rgba(24, 48, 85, 0.28);
 }
-.cuarto {
-  display: grid;
-  grid-template-columns: 200px auto;
-  background-color: var(--celeste);
-  text-align: justify;
-  color: var(--crema);
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
+
+.integrante img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(24, 48, 85, 0.15);
+  border: 4px solid var(--oscuro-azul); /* Marco oscuro a la imagen */
 }
-.botón {
+
+.nombre-integrante {
+  font-family: "Shrikhand", serif;
+  font-size: 1.3rem;
+  color: var(--azul); /* Letras azul oscuro */
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.descripcion-integrante {
+  color: var(--azul); /* Letras azul oscuro */
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+/* --- BOTONES Y REDES --- */
+.botón,
+.certificado {
   background-color: var(--celeste);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   border-radius: 10px;
@@ -102,17 +118,6 @@ body {
   margin: 10px;
   display: inline-block;
   cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-.certificado {
-  background-color: var(--celeste);
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  border-radius: 10px;
-  border: var(--celeste);
-  width: 150px;
-  height: 50px;
-  margin: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
@@ -163,6 +168,7 @@ body {
   background-color: #c13535;
 }
 
+/* --- SUBTÍTULOS Y PRINCIPAL --- */
 .subtitulo {
   color: var(--azul);
   font-size: 20px;
@@ -183,18 +189,39 @@ body {
   font-weight: normal;
 }
 
+.principal {
+  color: var(--crema);
+  background-color: var(--azul);
+  width: 100%;
+  padding: 30px;
+  height: 150px;
+  text-align: center;
+  font-family: "Shrikhand", serif;
+  font-size: 50px;
+  margin: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .equipo {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
 @media (max-width: 768px) {
   #texto {
     font-size: 40px;
     width: 100%;
     padding: 30px;
   }
-  .container,
-  .contenedor,
-  .tercero,
-  .cuarto {
-    grid-template-columns: 1fr;
-    width: 90%;
+  .equipo {
+    gap: 24px;
   }
   nav {
     flex-direction: column;
@@ -204,7 +231,6 @@ body {
     max-width: 80px;
     height: auto;
   }
-
   .barra {
     padding: 9px;
     text-align: center;
@@ -213,7 +239,6 @@ body {
     flex-direction: column;
     gap: 10px;
   }
-
   nav img {
     max-width: 80px;
     height: auto;
@@ -246,18 +271,6 @@ body {
   #texto {
     font-size: 23px;
     width: 100%;
-    padding: 10px;
-  }
-  .relleno {
-    font-size: 14px;
-    padding: 10px;
-  }
-  .container,
-  .contenedor,
-  .tercero,
-  .cuarto {
-    grid-template-columns: 1fr;
-    width: 95%;
     padding: 10px;
   }
   .instagram,
