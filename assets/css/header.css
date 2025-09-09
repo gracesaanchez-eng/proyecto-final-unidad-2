@@ -19,7 +19,7 @@ header {
   width: 120px;
 }
 
-.linkss {
+.links {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -28,7 +28,7 @@ header {
   padding: 0;
 }
 
-.linkss a {
+.links a {
   color: var(--crema);
   text-decoration: none;
   font-weight: bold;
