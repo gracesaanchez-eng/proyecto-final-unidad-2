@@ -31,6 +31,27 @@ img {
   margin-left: 200px;
 }
 
+img:hover {
+  
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.texto {
+
+  margin: 20px;
+  margin-left: 90px;
+  margin-right: 90px;
+  font-size: large;
+  color: var(--azul);
+  text-align: center;}
+
+.imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .start {
   font-size: larger;
   justify-items: center;
