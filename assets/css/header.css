@@ -5,18 +5,26 @@
   --oscuro-azul: #0b1726;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
 header {
   background-color: var(--celeste);
+  font-size: 20px;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  margin-left: 120px;
 }
 
 .logo img {
-  max-height: 90px;
-  width: 120px;
+  max-height: 120px;
+  width: 130px;
 }
 
 .links {
@@ -26,6 +34,8 @@ header {
   gap: 10px;
   margin: 0;
   padding: 0;
+  margin-left: auto;
+  margin-right: 100px;
 }
 
 .links a {
