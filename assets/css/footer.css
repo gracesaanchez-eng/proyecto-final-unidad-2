@@ -8,19 +8,48 @@ footer {
 }
 
 
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;         /* Para que en móvil se acomode en columnas */
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  gap: 20px;
+}
+
+.footer-brand h3 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer-links,
+.footer-contact,
+.footer-legal {
+  display: flex;
+  gap: 8px;
+flex-direction: column;
+}
+
 .footer a {
   color: #ffffff;
   text-decoration: none;
-  margin: 0 5px;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
+  font-size: 14px;
 }
 
 .footer a:hover {
-  color: var(--celeste);
+  color: #0077b6;
 }
 
-.footer-copy {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #666;
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #767676;
 }
