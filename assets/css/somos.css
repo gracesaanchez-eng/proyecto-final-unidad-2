@@ -27,11 +27,6 @@ h2 {
   font-size: 23px;
 }
 
-ul {
-  font-family: "Libre Baskerville", serif;
-  font-size: 16px;
-}
-
 body {
   background-color: var(--crema);
   color: black;
