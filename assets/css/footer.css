@@ -6,3 +6,21 @@ footer {
   align-items: center;
   padding: 10px;
 }
+
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--celeste);
+}
+
+.footer-copy {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
