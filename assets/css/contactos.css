@@ -5,24 +5,22 @@
   --oscuro-azul: #0b1726;
 }
 
-.shrikhand-regular {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Lucida Grande", "Lucida Sans'";
   background-color: var(--crema);
+  margin: 0;
+  text-align: center;
+  color: var(--celeste);
 }
 
 .contenedor {
-  width: 80%;
-  margin: 120px auto 40px;
+  max-width: 1000px;
+  margin: 80px auto 40px;
   padding: 20px;
   border: 1px solid var(--crema);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--azul);
+  color: #5c84b3;
 }
 
 label {
@@ -39,14 +37,6 @@ textarea {
   border: 1px solid var(--crema);
   box-sizing: border-box;
   display: inline-block;
-}
-
-.campo {
-  margin-bottom: 20px;
-}
-
-.informacion-contacto {
-  margin-top: 40px;
 }
 
 @media (min-width: 1200px) {
@@ -68,4 +58,123 @@ textarea {
     width: 100%;
     margin: 10px auto;
   }
+}
+
+.h1, h2, h3, h4 {
+  font-family: serif, sans-serif, Lucida;
+  color: var(--oscuro-azul);
+  text-align: center;
+  margin: 30px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: var(--celeste);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 16px;
+  margin: 5px 0;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 28px;
+  margin: 50px;
+  margin-bottom: 20px;
+}
+
+div {
+  text-align: center;
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
+.instagram {
+  background-color: #e1306c;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.facebook {
+  background-color: #303686;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.youtube {
+  background-color: #9c1212;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.tiktok {
+  background-color: black;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.twitter {
+  background-color: skyblue;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.linkedin {
+  background-color: blue;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.principal {
+  color: var(--crema);
+  background-color: var(--azul);
+  width: 100%;
+  padding: 30px;
+  height: 150px;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  gap: 50px;
+  text-align: justify;
+  justify-content: space-between;
+}
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
 }
