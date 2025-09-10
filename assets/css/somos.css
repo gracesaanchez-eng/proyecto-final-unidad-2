@@ -20,17 +20,12 @@ h2 {
 }
 
 body {
-<<<<<<< HEAD
   background: linear-gradient(135deg, #fafbe4 60%, #e3ecfa 100%);
   color: var(--azul);
   font-size: 20px;
   margin: 0;
   padding: 0;
   min-height: 100vh;
-=======
-  background-color: var(--crema);
-  color: black;
->>>>>>> 47481d428fa2ccb509dc6bdb4b912c69fcf778b1
 }
 
 #texto {
@@ -53,7 +48,6 @@ body {
   text-align: justify;
   line-height: 1.6;
 }
-<<<<<<< HEAD
 
 /* --- INTEGRANTES MODERNOS --- */
 .equipo {
@@ -63,23 +57,10 @@ body {
   margin: 40px auto 30px auto;
   flex-wrap: wrap;
   max-width: 1200px;
-=======
-.container {
-  display: grid;
-  grid-template-columns: 200px auto;
-  background-color: var(--celeste);
-  text-align: left;
-  color: var(--crema);
-  width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
->>>>>>> 47481d428fa2ccb509dc6bdb4b912c69fcf778b1
 }
 
 .integrante {
   background-color: var(--celeste);
-<<<<<<< HEAD
   color: var(--azul); /* Letras azul oscuro */
   width: 260px;
   min-height: 340px;
@@ -111,36 +92,6 @@ body {
   box-shadow: 0 4px 16px rgba(24, 48, 85, 0.15);
   border: 4px solid var(--oscuro-azul); /* Marco oscuro a la imagen */
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-=======
-  text-align: left;
-  color: var(--crema);
-  width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-}
-.tercero {
-  display: grid;
-  grid-template-columns: 200px auto;
-  background-color: var(--celeste);
-  text-align: left;
-  color: var(--crema);
-  width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-}
-.cuarto {
-  display: grid;
-  grid-template-columns: 200px auto;
-  background-color: var(--celeste);
-  text-align: left;
-  color: var(--crema);
-  width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
->>>>>>> 47481d428fa2ccb509dc6bdb4b912c69fcf778b1
 }
 
 .integrante:hover img {
@@ -379,4 +330,16 @@ body {
     display: block;
     margin: 8px auto;
   }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px auto;
+  background-color: var(--celeste);
+  text-align: left;
+  color: var(--crema);
+  width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
 }
