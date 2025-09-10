@@ -29,6 +29,9 @@ img {
   border-radius: 20px;
   width: 500px;
   margin-left: 200px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img:hover {
@@ -37,14 +40,22 @@ img:hover {
   transition: all 0.3s ease;
 }
 
+.imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .texto {
 
   margin: 20px;
   margin-left: 90px;
-  margin-right: 90px;
   font-size: large;
   color: var(--azul);
-  text-align: center;}
+  text-align: center;
+  margin-right: 90px;
+
+}
 
 .imagen {
   display: flex;
@@ -68,23 +79,7 @@ img:hover {
   text-align: center;
 }
 
-button {
-  display: flex;
-  background-color: var(--oscuro-azul);
-  color: var(--crema);
-  border: 0;
-  padding: 12px;
-}
 
-button:hover {
-  background-color: var(--celeste);
-  color: #000000;
-}
-
-.boton {
-  border-radius: 10px;
-  margin-top: 12px;
-}
 
 .content {
   display: flex;
@@ -94,7 +89,8 @@ button:hover {
 
 .medio {
   justify-items: center;
-  margin-top: 15px;
+  margin-top: 30px;
+  
 }
 
 .medio p {
