@@ -11,6 +11,11 @@
   --oscuro-azul: #0b1726;
 }
 
+header {
+  background-color: var(--celeste);
+  font-size: 16px;
+} 
+
 .shrikhand-regular {
   font-family: "Shrikhand", serif;
   font-weight: 400;
