@@ -30,14 +30,19 @@ p {
 }
 
 main {
-  margin-left: 100px;
-  margin-right: 100px;
+  display: flex; /* activa flexbox */
+  flex-direction: column; /* organiza los hijos en columna */
+  justify-content: center; /* centra verticalmente */
+  align-items: center; /* opcional: centra horizontalmente */
+  min-height: 100vh; /* ocupa toda la altura de la ventana */
+  padding: 20px; /* espacio interno */
+  box-sizing: border-box; /* incluye padding en el cálculo de altura */
 }
+
 body {
   background: linear-gradient(135deg, #fafbe4 60%, #e3ecfa 100%);
   color: black;
   font-size: 20px;
-  margin: 0;
   padding: 0;
   min-height: 100vh;
 }
