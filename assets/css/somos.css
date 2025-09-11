@@ -35,7 +35,7 @@ main {
   justify-content: center; /* centra verticalmente */
   align-items: center; /* opcional: centra horizontalmente */
   min-height: 100vh; /* ocupa toda la altura de la ventana */
-  padding: 20px; /* espacio interno */
+  padding: 38px 150px; /* espacio interno */
   box-sizing: border-box; /* incluye padding en el cálculo de altura */
 }
 
@@ -48,7 +48,6 @@ body {
 }
 
 .somos {
-  padding-top: 27px;
 }
 
 #texto {
@@ -65,8 +64,6 @@ body {
 
 .relleno {
   max-width: 1100px;
-
-  padding: 20px;
   text-align: justify;
   line-height: 1.6;
 }
@@ -76,7 +73,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 32px;
-  margin: 40px auto 30px auto;
+  margin: 40px auto auto;
   flex-wrap: wrap;
   max-width: 1200px;
 }
@@ -150,9 +147,15 @@ body {
 
 .descripcion-integrante {
   color: var(--azul); /* Letras azul oscuro */
-  font-size: 1rem;
   text-align: center;
   margin-top: 5px;
+}
+
+.historia {
+  margin-top: 38px;
+}
+
+.historia p {
   margin-bottom: 0;
 }
 
@@ -161,6 +164,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 38px;
+  gap: 30px;
 }
 
 .botón,
@@ -173,7 +178,6 @@ body {
   transition: box-shadow 0.2s, transform 0.2s;
   font-weight: bold;
   letter-spacing: 1px;
-  margin: 20px;
 }
 
 .botón:hover,
@@ -189,6 +193,7 @@ body {
   padding: 20px;
   text-align: center;
   border-radius: 10px;
+  margin-top: 38px;
 }
 
 .instagram {
