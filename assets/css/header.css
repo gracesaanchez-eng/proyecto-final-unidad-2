@@ -11,10 +11,6 @@
   font-style: normal;
 }
 
-a {
-  font-family: "Libre Baskerville", serif;
-}
-
 nav {
   display: flex;
   align-items: center;
@@ -23,7 +19,7 @@ nav {
 
 header {
   background-color: var(--celeste);
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .logo {
@@ -53,6 +49,8 @@ header {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
 }
 
 .links:hover {

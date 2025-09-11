@@ -29,21 +29,20 @@ h1 {
 }
 
 h2 {
-  text-align: center;
-  font-family: "Libre Baskerville", serif;
-  font-size: 23px;
+  font-family: "Shrikhand", serif;
+  font-size: 36px;
 }
 
-ul {
+p {
   font-family: "Libre Baskerville", serif;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 main {
   background-color: var(--crema);
 }
 
-img {
+.info img {
   border-radius: 20px;
   width: 500px;
   margin-left: 200px;
@@ -64,25 +63,24 @@ img:hover {
 }
 
 .texto {
-  margin: 20px;
-  margin-left: 90px;
-  font-size: large;
-  color: var(--azul);
+  font-size: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+  display: flex;
   text-align: justify;
-  margin-right: 90px;
+  align-items: center;
 }
 
-.imagen {
+.info {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 20px;
 }
 
 .start {
   font-size: larger;
   justify-items: center;
   text-align: center;
-  margin-top: 50px;
+  padding: 38px;
 }
 
 .principal {
@@ -94,6 +92,19 @@ img:hover {
   text-align: center;
 }
 
+button {
+  display: flex;
+  background-color: var(--oscuro-azul);
+  color: var(--crema);
+  border: 0;
+  padding: 12px;
+}
+
+.boton {
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
 .content {
   display: flex;
   text-align: center;
@@ -102,12 +113,14 @@ img:hover {
 
 .medio {
   justify-items: center;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .medio p {
   margin-left: 200px;
   margin-right: 200px;
+  display: flex;
+  text-align: center;
 }
 
 .target {
@@ -121,6 +134,11 @@ img:hover {
   border-radius: 10px;
   padding: 15px;
   margin: 20px;
+}
+
+.target p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 36px;
 }
 
 @media only screen and (max-width: 768px) {
