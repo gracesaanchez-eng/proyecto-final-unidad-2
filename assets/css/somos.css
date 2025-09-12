@@ -4,7 +4,6 @@
   --azul: #183055;
   --oscuro-azul: #0b1726;
 }
-
 .shrikhand-regular {
   font-family: "Shrikhand", serif;
   font-weight: 400;
@@ -45,6 +44,7 @@ body {
   font-size: 20px;
   padding: 0;
   min-height: 100vh;
+  font-family: "Nunito", Arial, sans-serif;
 }
 
 .somos {
@@ -79,7 +79,9 @@ body {
 }
 
 .integrante {
-  background-color: var(--celeste);
+  background: rgba(145, 160, 235, 0.75);
+  backdrop-filter: blur(6px);
+  border: 3px solid rgba(26, 54, 93, 0.18);
   color: var(--azul); /* Letras azul oscuro */
   width: 260px;
   min-height: 340px;
@@ -87,13 +89,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  box-shadow: 0 8px 32px rgba(24, 48, 85, 0.18);
+  box-shadow: 0 8px 32px rgba(24, 48, 85, 0.18), 0 0 0 4px #fff3;
   transition: transform 0.25s cubic-bezier(0.4, 2, 0.3, 1), box-shadow 0.25s;
   will-change: transform;
   border-radius: 20px; /* Bordes redondeados */
   padding: 24px 16px;
   box-sizing: border-box;
-  border: 3px solid var(--oscuro-azul); /* Marco oscuro */
 }
 
 .integrante:hover {
@@ -145,6 +146,13 @@ body {
   width: 100%;
 }
 
+.nombre-integrante::before {
+  font-size: 1.1em;
+  margin-right: 4px;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
 .descripcion-integrante {
   color: var(--azul); /* Letras azul oscuro */
   text-align: center;
@@ -170,73 +178,66 @@ body {
 
 .botón,
 .certificado {
-  background: var(--celeste);
-  color: black;
-  border-radius: 12px;
+  background: linear-gradient(90deg, var(--celeste), var(--gris-claro));
+  color: var(--azul);
+  border-radius: 14px;
   border: none;
-  box-shadow: 4px 4px 12px #b0c4de, -4px -4px 12px #fff;
-  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: 4px 4px 12px #b0c4de, -4px -4px 12px #d0dce2;
+  transition: box-shadow 0.25s, transform 0.25s, background 0.3s, color 0.3s;
   font-weight: bold;
   letter-spacing: 1px;
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 1rem;
+  padding: 12px 28px;
+  margin: 0 8px;
+  cursor: pointer;
 }
 
 .botón:hover,
 .certificado:hover {
-  box-shadow: 2px 2px 8px #b0c4de, -2px -2px 8px #fff;
-  transform: translateY(-2px) scale(1.04);
-  background: var(--azul);
+  background: linear-gradient(90deg, var(--azul), var(--celeste));
   color: var(--crema);
+  transform: translateY(-4px) scale(1.06);
 }
 
 .seguir {
-  background-color: var(--celeste);
-  padding: 20px;
+  background: rgba(93, 193, 185, 0.18);
+  backdrop-filter: blur(3px);
+  padding: 32px 20px 24px 20px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 18px;
   margin-top: 38px;
+  box-shadow: 0 4px 24px rgba(24, 48, 85, 0.10);
+  position: relative;
 }
 
-.instagram {
-  background-color: #e1306c;
-  color: var(--crema);
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-left: 10px;
+.seguir::before {
+  content: "🌐";
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.85;
 }
 
-.instagram:hover {
-  background-color: #c13584;
+/* Botones de redes con emojis */
+.instagram::before {
+  content: "📸 ";
+  font-size: 1.1em;
+  margin-right: 4px;
+}
+.facebook::before {
+  content: "📘 ";
+  font-size: 1.1em;
+  margin-right: 4px;
+}
+.youtube::before {
+  content: "▶️ ";
+  font-size: 1.1em;
+  margin-right: 4px;
 }
 
-.facebook {
-  background-color: #303686;
-  color: var(--crema);
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-.facebook:hover {
-  background-color: #40447e;
-}
+/* ...código existente... */
 
-.youtube {
-  background-color: #9c1212;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.youtube:hover {
-  background-color: #c13535;
-  filter: brightness(1.15) drop-shadow(0 0 6px var(--celeste));
-  transform: scale(1.07);
-}
-
-/* --- SUBTÍTULOS Y PRINCIPAL --- */
 .subtitulo {
   color: var(--azul);
   font-family: Arial, Helvetica, sans-serif;
@@ -270,11 +271,21 @@ body {
 }
 
 .separador {
-  width: 80px;
-  height: 5px;
+  width: 90px;
+  height: 6px;
   background: linear-gradient(90deg, var(--celeste), var(--azul));
   border-radius: 3px;
   margin: 40px auto 30px auto;
+  opacity: 0.85;
+  position: relative;
+}
+.separador::after {
+  content: "⚕️";
+  position: absolute;
+  left: 50%;
+  top: -28px;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
   opacity: 0.7;
 }
 
@@ -376,4 +387,8 @@ body {
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
+}
+
+h1, .principal {
+  font-size: clamp(2rem, 5vw, 3rem);
 }
