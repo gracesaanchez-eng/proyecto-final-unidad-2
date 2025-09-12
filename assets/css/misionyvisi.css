@@ -11,17 +11,32 @@
   font-style: normal;
 }
 
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h3 {
   text-align: center;
 }
 
 h2 {
   text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 24px;
 }
 
 h1 {
   text-align: center;
   font-family: "Shrikhand", serif;
+  font-size: 40px;
+}
+
+p {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
 }
 
 body {
@@ -29,9 +44,12 @@ body {
 }
 
 main {
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 30px;
+  display: flex; /* activa flexbox */
+  flex-direction: column; /* apila todos los hijos verticalmente */
+  justify-content: center; /* centra verticalmente todo el contenido */
+  align-items: center; /* centra horizontalmente */
+  box-sizing: border-box; /* incluye padding en la altura */
+  text-align: center; /* centra el texto dentro de los bloques */
 }
 
 .principal {
@@ -46,17 +64,22 @@ main {
 .flex-container {
   display: flex;
   flex-direction: row;
+  gap: 50px; /* espacio entre los bloques */
+  justify-content: center; /* centra los bloques horizontalmente */
+  flex-wrap: wrap; /* permite que bajen a otra línea si no caben */
   margin-top: 50px;
-  gap: 50px;
-  text-align: justify;
-  justify-content: space-between;
+  width: 100%; /* asegura que el contenedor no se salga del main */
+  box-sizing: border-box; /* incluye padding/borde en el cálculo */
 }
 
 .custom-content {
   border: 5px solid var(--oscuro-azul);
   padding: 30px;
-  justify-content: center;
   border-radius: 20px;
+  width: 100%; /* ancho completo dentro del flex-wrap */
+  max-width: 500px; /* limita el ancho para que no se sobrepase */
+  box-sizing: border-box; /* importante para que padding+borde no aumenten ancho */
+  text-align: justify; /* justifica el texto */
 }
 
 .custom-content:hover {
@@ -69,6 +92,7 @@ main {
   gap: 50px;
   align-items: center;
   justify-content: center;
+  margin-top: 38px;
 }
 
 .fila div {
@@ -83,7 +107,7 @@ main {
 .columnas {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin-top: 38px;
   align-items: center;
   justify-content: center;
 }
@@ -98,27 +122,37 @@ main {
   border-radius: 20px;
 }
 
+.logros {
+  margin-top: 38px;
+}
+
 .todos {
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
 }
 
 .grande {
-  justify-content: center;
-  height: 150px;
-  text-align: justify;
-  width: 500px;
+  width: 45%;
+  max-width: 500px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .chiquitos {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  width: 700px;
-  padding: 20px;
-  justify-content: center;
+  gap: 20px;
+  width: 45%;
+  max-width: 700px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .chiquitos div {
@@ -131,6 +165,8 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  margin-right: 20px;
 }
 
 .logo img {
@@ -148,14 +184,6 @@ img {
   text-align: justify;
 }
 
-footer {
-  background-color: #000000;
-  color: rgb(248, 248, 248);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 @media only screen and (max-width: 768px) {
   html {
     font-size: 14px;
@@ -166,8 +194,9 @@ footer {
     margin-right: 50px;
   }
 
-  .fila div {
-    height: 200px;
+  .fila {
+    display: flex;
+    flex-direction: column;
   }
 
   .columnas div {
@@ -179,7 +208,8 @@ footer {
   }
 
   .grande {
-    height: 100px;
+    height: 150px;
+    width: 100%;
   }
 
   img {

@@ -11,21 +11,43 @@
   font-style: normal;
 }
 
-h1 {
-  font-family: "Shrikhand", serif;
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-h2 {
+h1 {
   font-family: "Shrikhand", serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+}
+
+main {
+  display: flex; /* activa flexbox */
+  flex-direction: column; /* organiza los hijos en columna */
+  justify-content: center; /* centra verticalmente */
+  align-items: center; /* opcional: centra horizontalmente */
+  min-height: 100vh; /* ocupa toda la altura de la ventana */
+  padding: 38px 150px; /* espacio interno */
+  box-sizing: border-box; /* incluye padding en el cálculo de altura */
 }
 
 body {
   background: linear-gradient(135deg, #fafbe4 60%, #e3ecfa 100%);
-  color: var(--azul);
+  color: black;
   font-size: 20px;
-  margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+.somos {
 }
 
 #texto {
@@ -35,7 +57,6 @@ body {
   padding: 30px;
   height: 150px;
   text-align: center;
-  margin: 0;
   border-radius: 0;
   box-sizing: border-box;
   display: block;
@@ -43,8 +64,6 @@ body {
 
 .relleno {
   max-width: 1100px;
-  margin: 50px auto;
-  padding: 20px;
   text-align: justify;
   line-height: 1.6;
 }
@@ -54,7 +73,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 32px;
-  margin: 40px auto 30px auto;
+  margin: 40px auto auto;
   flex-wrap: wrap;
   max-width: 1200px;
 }
@@ -69,7 +88,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   box-shadow: 0 8px 32px rgba(24, 48, 85, 0.18);
-  transition: transform 0.25s cubic-bezier(.4, 2, .3, 1), box-shadow 0.25s;
+  transition: transform 0.25s cubic-bezier(0.4, 2, 0.3, 1), box-shadow 0.25s;
   will-change: transform;
   border-radius: 20px; /* Bordes redondeados */
   padding: 24px 16px;
@@ -128,17 +147,31 @@ body {
 
 .descripcion-integrante {
   color: var(--azul); /* Letras azul oscuro */
-  font-size: 1rem;
   text-align: center;
   margin-top: 5px;
+}
+
+.historia {
+  margin-top: 38px;
+}
+
+.historia p {
   margin-bottom: 0;
 }
 
 /* --- BOTONES Y REDES --- */
+.botones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 38px;
+  gap: 30px;
+}
+
 .botón,
 .certificado {
   background: var(--celeste);
-  color: var(--azul);
+  color: black;
   border-radius: 12px;
   border: none;
   box-shadow: 4px 4px 12px #b0c4de, -4px -4px 12px #fff;
@@ -160,6 +193,7 @@ body {
   padding: 20px;
   text-align: center;
   border-radius: 10px;
+  margin-top: 38px;
 }
 
 .instagram {

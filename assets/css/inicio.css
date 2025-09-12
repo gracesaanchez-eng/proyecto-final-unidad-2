@@ -17,57 +17,66 @@
   font-style: normal;
 }
 
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h1 {
   font-family: "Shrikhand", serif;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 36px;
+}
+
+p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
 }
 
 main {
   background-color: var(--crema);
 }
 
-img {
+.info img {
   border-radius: 20px;
   width: 500px;
-  margin-left: 200px;
-    display: flex;
+  margin-left: 150px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 img:hover {
-  
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
 
-.imagen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .texto {
-
-  margin: 20px;
-  margin-left: 90px;
-  font-size: large;
-  color: var(--azul);
+  margin-left: 150px;
+  margin-right: 154px;
+  display: flex;
   text-align: justify;
-  margin-right: 90px;
-
+  align-items: center;
 }
 
-.imagen {
+.info {
   display: flex;
+  margin-top: 38px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .start {
   font-size: larger;
   justify-items: center;
   text-align: center;
-  margin-top: 50px;
+  padding-top: 38px;
 }
 
 .principal {
@@ -79,7 +88,18 @@ img:hover {
   text-align: center;
 }
 
+button {
+  display: flex;
+  background-color: var(--oscuro-azul);
+  color: var(--crema);
+  border: 0;
+  padding: 12px;
+}
 
+.boton {
+  border-radius: 10px;
+  margin-top: 12px;
+}
 
 .content {
   display: flex;
@@ -89,26 +109,31 @@ img:hover {
 
 .medio {
   justify-items: center;
-  margin-top: 30px;
-  
+  margin-top: 38px;
+  margin-bottom: 0;
 }
 
 .medio p {
   margin-left: 200px;
   margin-right: 200px;
+  display: flex;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .target {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
 }
 
 .target div {
   background-color: var(--celeste);
   border-radius: 10px;
   padding: 15px;
-  margin: 20px;
+  margin: 38px 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -233,7 +258,6 @@ img:hover {
   .boton {
     border-radius: 10px;
     margin-top: 12px;
-    font-size: 12px;
   }
 
   .medio {
