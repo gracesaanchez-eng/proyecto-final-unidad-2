@@ -3,21 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Telemedicina</title>
+    <title>Contacto - JELTIFY</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/contactos.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <header>
@@ -31,53 +29,77 @@
         </div>
 
         <ul class="links">
-          <li><a class="link" href="../../index.html">| Inicio |</a></li>
-          <li><a class="link" href="../html/somos.html">Quiénes somos |</a></li>
+          <li><a class="link" href="../../index.html">Inicio </a></li>
+          <li><a class="link" href="../html/somos.html">Quiénes somos </a></li>
           <li>
             <a class="link" href="../html/misionyvision.html"
-              >Misión y Visión |</a
-            >
+              >Misión y Visión </a>
           </li>
-          <li><a class="link" href="../html/contactos.html">Contacto |</a></li>
+          <li><a class="link" href="../html/contactos.html">Contacto</a></li>
         </ul>
       </nav>
     </header>
-    <section>
+          <section>
       <div class="principal">
         <h1>Contacto</h1>
-        <p>de Healthify</p>
+        <p>de JELTIFY</p>
       </div>
+      </section>
+<main>
+
     <div class="contenedor">
-      <h3><strong>Y recuerda si tienes alguna duda o consulta...</strong></h3>
-      <h3><strong>¡No dudes en contactarnos!</strong></h3>
-      <h4>Estas son nuestras redes sociales</h4>
+      <h1>Información de Contacto</h1>
       <p>💬Whatsapp: +51 922-384-589</p>
       <p>📞Teléfono: +01 459-3333</p>
 
-      <h4>🤳Síguenos en nuestras redes sociales</h4>
+      <h1>Redes Sociales</h1>
         <div class="redes">
-          <a href="https://www.instagram.com/" class="instagram">📷Instagram</a>
-          <a href="https://www.linkedin.com/" class="linkedin"></i>💼LinkedIn</a>
-          <a href="https://www.facebook.com/" class="facebook">🫂Facebook</a>
-          <a href="https://www.youtube.com/" class="youtube">🎥YouTube</a>
-          <a href="https://www.tiktok.com/" class="tiktok">👫TikTok</a>
-          <a href="https://www.twitter.com/" class="twitter">🐦Twitter</a>
+          <a href="https://www.instagram.com/" class="instagram">Instagram</a>
+          <a href="https://www.linkedin.com/" class="linkedin"></i>LinkedIn</a>
+          <a href="https://www.facebook.com/" class="facebook">Facebook</a>
+          <a href="https://www.youtube.com/" class="youtube">YouTube</a>
+          <a href="https://www.tiktok.com/" class="tiktok">TikTok</a>
+          <a href="https://www.twitter.com/" class="twitter">Twitter</a>
         </div>
-
-
-
-      <p>Correo electrónico: healthify@telemedicina.com</p>
-      <h3><strong>Nuestras oficinas estan en estos lugares</strong></h3>
+      <h1>Ubícanos</h1>
       <p>Dirección: Calle 335, San Isidro, Lima</p>
       <p>Dirección: Calle 123, Los Olivos, Lima</p>
-      <h4><strong>Queremos saber que opinas de nosotros, por favor llena el siguiente
-        formulario!</strong>
-      </h4>
-      <a href="https://forms.gle/iKYRiYa8BLJVS9ax8">
-        <button>Ir al formulario</button>
-      </a>  
-      <h3>HEALTHIFY: TU CAMINO HACIA EL BIENESTAR 😁</h3>
+      <section>
+        <h1>Solicitud de Consulta</h1>
+
+    <form id="consultaform">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="ejemplo@mail.com" required>
+
+      <label for="telefono">Teléfono (opcional):</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
+
+      <label for="tipoConsulta">Tipo de consulta:</label>
+      <select id="tipoConsulta" name="tipoConsulta" required>
+        <option value="">Selecciona una opción</option>
+        <option value="general">Médica general</option>
+        <option value="especialista">Especialista</option>
+        <option value="seguimiento">Seguimiento</option>
+      </select>
+
+      <label for="fecha">Fecha preferida:</label>
+      <input type="date" id="fecha" name="fecha">
+
+      <label for="mensaje">Mensaje / motivo de consulta:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." required></textarea>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
     </div>
+
+    
+</main>
     
     
     <footer class="footer">
@@ -119,6 +141,5 @@
   </div>
 </footer>
 
-    <script src="script.js"></script>
   </body>
 </html>
