@@ -4,7 +4,6 @@
   --azul: #183055;
   --oscuro-azul: #0b1726;
 }
-
 .shrikhand-regular {
   font-family: "Shrikhand", serif;
   font-weight: 400;
@@ -59,43 +58,44 @@ body {
   display: block;
 }
 
+/*Texto del relleno, debajo del encabezado*/
 .relleno {
   max-width: 1100px;
   text-align: justify;
-  line-height: 1.6;
+  line-height: 1.8;
+  margin: 30px auto;
+  color: var(--oscuro-azul);
 }
 
-/* --- INTEGRANTES MODERNOS --- */
+/* -------- EQUIPO -------- */
 .equipo {
   display: flex;
   justify-content: center;
   gap: 32px;
-  margin: 40px auto auto;
+  margin: 50px auto;
   flex-wrap: wrap;
   max-width: 1200px;
 }
 
+/* -------- TARJETAS DE INTEGRANTES -------- */
 .integrante {
-  background-color: var(--celeste);
-  color: var(--azul); /* Letras azul oscuro */
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--celeste);
+  color: var(--azul);
   width: 260px;
   min-height: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  box-shadow: 0 8px 32px rgba(24, 48, 85, 0.18);
-  transition: transform 0.25s cubic-bezier(0.4, 2, 0.3, 1), box-shadow 0.25s;
-  will-change: transform;
-  border-radius: 20px; /* Bordes redondeados */
   padding: 24px 16px;
-  box-sizing: border-box;
-  border: 3px solid var(--oscuro-azul); /* Marco oscuro */
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(24, 48, 85, 0.15);
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .integrante:hover {
-  transform: translateY(-12px) scale(1.05) rotate(-1deg);
-  box-shadow: 0 16px 40px 0 rgba(24, 48, 85, 0.28), 0 0 16px 2px var(--celeste);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(24, 48, 85, 0.25);
   border-color: var(--azul);
 }
 
@@ -104,273 +104,145 @@ body {
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 16px rgba(24, 48, 85, 0.15);
-  border: 4px solid var(--oscuro-azul); /* Marco oscuro a la imagen */
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(24, 48, 85, 0.2);
+  border: 4px solid var(--celeste);
+  transition: transform 0.3s, border-color 0.3s;
 }
 
 .integrante:hover img {
-  transform: scale(1.12) rotate(2deg);
-  box-shadow: 0 8px 32px 0 var(--celeste), 0 0 0 6px var(--crema);
+  transform: scale(1.08);
   border-color: var(--azul);
 }
 
+/* -------- NOMBRE Y DESCRIPCIÓN -------- */
 .nombre-integrante {
-  position: relative;
-  display: inline-block;
   font-family: "Shrikhand", serif;
   font-size: 1.3rem;
-  color: var(--azul); /* Letras azul oscuro */
-  margin-bottom: 10px;
-  margin-top: 0;
+  color: var(--azul);
+  margin-bottom: 8px;
   text-align: center;
 }
 
-.nombre-integrante::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--celeste), var(--azul));
-  transition: width 0.4s;
-  border-radius: 2px;
-  margin: 0 auto;
-}
-
-.integrante:hover .nombre-integrante::after {
-  width: 100%;
+.nombre-integrante::before {
+  font-size: 1.1em;
+  margin-right: 4px;
+  vertical-align: middle;
+  opacity: 0.85;
 }
 
 .descripcion-integrante {
-  color: var(--azul); /* Letras azul oscuro */
+  color: var(--oscuro-azul);
   text-align: center;
-  margin-top: 5px;
+  font-size: 0.95rem;
+  margin-top: 6px;
 }
 
+/* -------- HISTORIA -------- */
 .historia {
-  margin-top: 38px;
+  margin-top: 40px;
 }
 
 .historia p {
   margin-bottom: 0;
+  font-size: 1rem;
 }
 
-/* --- BOTONES Y REDES --- */
+/* -------- BOTONES -------- */
 .botones {
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-top: 38px;
-  gap: 30px;
+  gap: 25px;
 }
 
 .botón,
 .certificado {
-  background: var(--celeste);
-  color: black;
+  background: linear-gradient(90deg, var(--celeste), var(--gris-claro));
+  color: var(--azul);
   border-radius: 12px;
   border: none;
-  box-shadow: 4px 4px 12px #b0c4de, -4px -4px 12px #fff;
-  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(92, 132, 179, 0.3);
+  transition: all 0.3s;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 1rem;
+  padding: 12px 28px;
+  cursor: pointer;
 }
 
 .botón:hover,
 .certificado:hover {
-  box-shadow: 2px 2px 8px #b0c4de, -2px -2px 8px #fff;
-  transform: translateY(-2px) scale(1.04);
-  background: var(--azul);
+  background: linear-gradient(90deg, var(--azul), var(--celeste));
   color: var(--crema);
+  transform: translateY(-3px) scale(1.05);
 }
 
+/* -------- SECCIÓN SÍGUENOS -------- */
 .seguir {
-  background-color: var(--celeste);
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--celeste);
+  box-shadow: 0 6px 16px rgba(24, 48, 85, 0.15);
+  border-radius: 20px;
+  padding: 28px 20px;
+  max-width: 370px;
+  margin: 48px auto;
   text-align: center;
-  border-radius: 10px;
-  margin-top: 38px;
+  transition: all 0.3s;
 }
 
-.instagram {
-  background-color: #e1306c;
-  color: var(--crema);
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.instagram:hover {
-  background-color: #c13584;
-}
-
-.facebook {
-  background-color: #303686;
-  color: var(--crema);
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-.facebook:hover {
-  background-color: #40447e;
-}
-
-.youtube {
-  background-color: #9c1212;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.youtube:hover {
-  background-color: #c13535;
-  filter: brightness(1.15) drop-shadow(0 0 6px var(--celeste));
-  transform: scale(1.07);
-}
-
-/* --- SUBTÍTULOS Y PRINCIPAL --- */
-.subtitulo {
+.seguir h2 {
   color: var(--azul);
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin-top: -20px;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-}
-
-.subtexto {
-  color: var(--crema);
-  text-align: center;
-  margin-top: 10px;
-  font-weight: normal;
-}
-
-.principal {
-  color: var(--crema);
-  background-color: var(--azul);
-  width: 100%;
-  padding: 30px;
-  height: 150px;
-  text-align: center;
   font-family: "Shrikhand", serif;
-  font-size: 50px;
-  margin: 0;
-  border-radius: 0;
-  box-sizing: border-box;
-  display: block;
-  position: relative;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-.separador {
-  width: 80px;
-  height: 5px;
-  background: linear-gradient(90deg, var(--celeste), var(--azul));
-  border-radius: 3px;
-  margin: 40px auto 30px auto;
-  opacity: 0.7;
+.seguir p {
+  color: var(--oscuro-azul);
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 16px;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-  .equipo {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
+.botones-redes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
 
-@media (max-width: 768px) {
-  #texto {
-    font-size: 40px;
-    width: 100%;
-    padding: 30px;
-  }
-  .equipo {
-    gap: 24px;
-  }
-  nav {
-    flex-direction: column;
-    font-size: medium;
-  }
-  .logo img {
-    max-width: 80px;
-    height: auto;
-  }
-  .barra {
-    padding: 9px;
-    text-align: center;
-  }
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-  nav img {
-    max-width: 80px;
-    height: auto;
-  }
-  .link {
-    font-size: 16px;
-    display: block;
-  }
+.red-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, var(--celeste), var(--gris-claro));
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(92, 132, 179, 0.25);
+  padding: 16px 12px;
+  min-width: 80px;
+  transition: transform 0.25s, background 0.25s;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-@media (max-width: 600px) {
-  .integrante {
-    width: 90vw;
-    min-width: unset;
-    padding: 18px 6vw;
-  }
-  .integrante img {
-    width: 90px;
-    height: 90px;
-  }
+.red-social:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(135deg, var(--azul), var(--celeste));
 }
 
-@media (max-width: 430px) {
-  .barra {
-    padding: 5px;
-    text-align: center;
-  }
-  nav {
-    flex-direction: column;
-    font-size: 14px;
-    gap: 8px;
-  }
-  .logo img {
-    max-width: 60px;
-    height: auto;
-  }
-  .link {
-    display: block;
-    font-size: 14px;
-    padding: 5px;
-  }
-  #texto {
-    font-size: 23px;
-    width: 100%;
-    padding: 10px;
-  }
-  .instagram,
-  .facebook,
-  .youtube {
-    display: block;
-    margin: 8px auto;
-  }
+.red-social .icono {
+  font-size: 2rem;
+  margin-bottom: 6px;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 200px auto;
-  background-color: var(--celeste);
-  text-align: left;
+.red-social span {
+  color: var(--azul);
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.red-social:hover span {
   color: var(--crema);
-  width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
 }

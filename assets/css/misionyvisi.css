@@ -50,6 +50,7 @@ main {
   align-items: center; /* centra horizontalmente */
   box-sizing: border-box; /* incluye padding en la altura */
   text-align: center; /* centra el texto dentro de los bloques */
+  margin-bottom: 38px;
 }
 
 .principal {

@@ -19,7 +19,8 @@ nav {
 
 header * {
   background-color: var(--celeste);
-  font-size: 16px; /* tamaño base */
+  font-size: 16px;
+  margin: 0;
 }
 
 .logo {
