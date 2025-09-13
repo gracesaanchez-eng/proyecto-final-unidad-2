@@ -47,9 +47,6 @@ body {
   min-height: 100vh;
 }
 
-.somos {
-}
-
 #texto {
   color: var(--crema);
   background-color: var(--azul);
