@@ -1,7 +1,7 @@
-// 🧠 Lista para almacenar todos los comentarios (array)
+//  Lista para almacenar todos los comentarios (array)
 let comentarios = [];
 
-// 🧩 Clase para representar un comentario (POO)
+//  Clase para representar un comentario (POO)
 class Comentario {
   constructor(nombre, correo, texto, valoracion) {
     this.nombre = nombre || "Anónimo";
@@ -12,7 +12,7 @@ class Comentario {
   }
 }
 
-// ⚡ Función para validar texto (estructura de control con if)
+//  Función para validar texto (estructura de control con if)
 function validarTexto(texto) {
   if (!texto || texto.trim() === "") {
     return false;
@@ -20,7 +20,7 @@ function validarTexto(texto) {
   return true;
 }
 
-// ⚡ Función para mostrar comentarios en el DOM
+// Función para mostrar comentarios en el DOM
 function mostrarComentarios() {
   let lista = document.getElementById("listaComentarios");
   lista.innerHTML = "";
@@ -40,7 +40,7 @@ function mostrarComentarios() {
   }
 }
 
-// ⚡ Función para manejar el envío del formulario
+//  Función para manejar el envío del formulario
 function manejarFormulario(event) {
   event.preventDefault(); // evitar recargar la página
 
