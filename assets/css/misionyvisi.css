@@ -65,12 +65,12 @@ main {
 .flex-container {
   display: flex;
   flex-direction: row;
-  gap: 50px; /* espacio entre los bloques */
-  justify-content: center; /* centra los bloques horizontalmente */
-  flex-wrap: wrap; /* permite que bajen a otra línea si no caben */
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 50px;
-  width: 100%; /* asegura que el contenedor no se salga del main */
-  box-sizing: border-box; /* incluye padding/borde en el cálculo */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .custom-content {

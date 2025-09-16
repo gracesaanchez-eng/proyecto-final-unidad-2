@@ -75,8 +75,8 @@ body {
 
 /* -------- TARJETAS DE INTEGRANTES -------- */
 .integrante {
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid var(--celeste);
+  background: var(--crema);
+  border: 5px solid var(--oscuro-azul);
   color: var(--azul);
   width: 260px;
   min-height: 340px;
@@ -167,6 +167,7 @@ body {
   font-size: 1rem;
   padding: 12px 28px;
   cursor: pointer;
+  background-color: var(--celeste);
 }
 
 .botón:hover,
@@ -177,33 +178,6 @@ body {
 }
 
 /* -------- SECCIÓN SÍGUENOS -------- */
-.seguir {
-  background: rgba(255, 255, 255, 0.3);
-  border: 2px solid var(--celeste);
-  box-shadow: 0 6px 16px rgba(24, 48, 85, 0.15);
-  border-radius: 20px;
-  padding: 28px 20px;
-  max-width: 370px;
-  margin: 48px auto;
-  text-align: center;
-  transition: all 0.3s;
-  font-family: "Libre Baskerville", serif;
-  font-size: 16px;
-}
-
-.seguir h2 {
-  color: var(--azul);
-  font-family: "Shrikhand", serif;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.seguir p {
-  color: var(--oscuro-azul);
-  font-family: "libre Baskerville", serif;
-  font-size: 1rem;
-  margin-bottom: 16px;
-}
 
 .botones-redes {
   display: flex;
@@ -249,7 +223,7 @@ body {
 
 .formulario-sugerencias {
   background: #f4f9ff;
-  border: 2px solid var(--celeste);
+  border: 5px solid var(--oscuro-azul);
   border-radius: 15px;
   padding: 30px;
   margin: 50px auto;

@@ -15,14 +15,15 @@ nav {
   display: flex;
   align-items: center;
   padding: 15px;
-  position: sticky;
 }
 
 header {
   position: sticky;
+  left: 0;
   top: 0;
   width: 100%;
   background-color: var(--celeste);
+  z-index: 1000;
 }
 
 header * {
