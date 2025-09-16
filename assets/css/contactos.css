@@ -79,7 +79,35 @@ textarea {
   border: 1px solid var(--crema);
   box-sizing: border-box;
   display: inline-block;
-  font-family: "Libre Baskerville", serif;
+}
+
+@media (min-width: 1200px) {
+  .contenedor {
+    width: 80%;
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .contenedor {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .contenedor {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+
+.h1, h2, h3, h4 {
+  font-family: serif, sans-serif, Lucida;
+  color: var(--oscuro-azul);
+  text-align: center;
+  margin: 30px;
+  margin-bottom: 20px;
 }
 
 button {
