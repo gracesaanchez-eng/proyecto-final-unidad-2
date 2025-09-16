@@ -166,7 +166,7 @@ body {
   transition: all 0.3s;
   font-weight: bold;
   letter-spacing: 0.5px;
-  font-family: "Nunito", Arial, sans-serif;
+  font-family: "libre Baskerville", serif;
   font-size: 1rem;
   padding: 12px 28px;
   cursor: pointer;
@@ -190,6 +190,7 @@ body {
   margin: 48px auto;
   text-align: center;
   transition: all 0.3s;
+  font-family: "libre Baskerville", serif;
 }
 
 .seguir h2 {
@@ -201,7 +202,7 @@ body {
 
 .seguir p {
   color: var(--oscuro-azul);
-  font-family: "Nunito", Arial, sans-serif;
+  font-family: "libre Baskerville", serif;
   font-size: 1rem;
   margin-bottom: 16px;
 }
@@ -224,6 +225,7 @@ body {
   transition: transform 0.25s, background 0.25s;
   cursor: pointer;
   text-decoration: none;
+  font-family: "Libre Baskerville", serif;
 }
 
 .red-social:hover {
@@ -245,4 +247,78 @@ body {
 
 .red-social:hover span {
   color: var(--crema);
+}
+
+.formulario-sugerencias {
+  background: #f4f9ff;
+  border: 2px solid var(--celeste);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 50px auto;
+  max-width: 600px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  font-family: "Libre Baskerville", serif;
+}
+
+.formulario-sugerencias h2 {
+  text-align: center;
+  color: var(--azul);
+  margin-bottom: 20px;
+}
+
+.formulario-sugerencias form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-sugerencias input,
+.formulario-sugerencias textarea,
+.formulario-sugerencias select {
+  padding: 10px;
+  border: 1px solid #c5d6e8;
+  border-radius: 8px;
+  font-family: "Libre Baskerville", serif;
+}
+
+.formulario-sugerencias textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formulario-sugerencias button {
+  background-color: var(--celeste);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.formulario-sugerencias button:hover {
+  background-color: var(--azul);
+}
+.comentarios-lista {
+  margin-top: 30px;
+  padding: 15px;
+  border-top: 2px dashed var(--celeste);
+}
+
+.comentario-card {
+  background: #f0f7ff;
+  border: 1px solid #c5d6e8;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.comentario-card h4 {
+  margin: 0;
+  color: var(--azul);
+}
+
+.comentario-card p {
+  margin: 5px 0;
 }
