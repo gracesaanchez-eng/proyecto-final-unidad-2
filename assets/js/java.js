@@ -1,57 +1,81 @@
-// 🎀 Objeto para representar un comentario
+// 🧠 Lista para almacenar todos los comentarios (array)
+let comentarios = [];
+
+// 🧩 Clase para representar un comentario (POO)
 class Comentario {
   constructor(nombre, correo, texto, valoracion) {
     this.nombre = nombre || "Anónimo";
     this.correo = correo || "No proporcionado";
     this.texto = texto;
     this.valoracion = valoracion || "Sin valorar";
-  }
-
-  mostrarEnConsola() {
-    console.log("📩 Nuevo comentario recibido:");
-    console.log(`Nombre: ${this.nombre}`);
-    console.log(`Correo: ${this.correo}`);
-    console.log(`Comentario: ${this.texto}`);
-    console.log(`Valoración: ${this.valoracion}`);
+    this.fecha = new Date().toLocaleString();
   }
 }
 
-// 🎯 Función principal
+// ⚡ Función para validar texto (estructura de control con if)
+function validarTexto(texto) {
+  if (!texto || texto.trim() === "") {
+    return false;
+  }
+  return true;
+}
+
+// ⚡ Función para mostrar comentarios en el DOM
+function mostrarComentarios() {
+  let lista = document.getElementById("listaComentarios");
+  lista.innerHTML = "";
+
+  for (let i = 0; i < comentarios.length; i++) {
+    let c = comentarios[i];
+
+    // crear elemento HTML dinámicamente
+    let card = document.createElement("div");
+    card.className = "comentario-card";
+    card.innerHTML = `
+      <h4>${c.nombre} (${c.valoracion}⭐)</h4>
+      <p>${c.texto}</p>
+      <small>${c.fecha}</small>
+    `;
+    lista.appendChild(card);
+  }
+}
+
+// ⚡ Función para manejar el envío del formulario
 function manejarFormulario(event) {
-  event.preventDefault();
+  event.preventDefault(); // evitar recargar la página
 
-  const nombre = document.getElementById("nombre").value.trim();
-  const correo = document.getElementById("correo").value.trim();
-  const texto = document.getElementById("comentario").value.trim();
-  const valoracion = document.getElementById("valoracion").value;
+  // obtener datos del formulario
+  let nombre = document.getElementById("nombre").value;
+  let correo = document.getElementById("correo").value;
+  let texto = document.getElementById("comentario").value;
+  let valoracion = document.getElementById("valoracion").value;
 
-  // Validación con condicionales
-  if (!texto) {
-    alert("⚠️ Por favor escribe un comentario antes de enviar.");
+  // validar
+  if (!validarTexto(texto)) {
+    alert("⚠️ Escribe un comentario antes de enviar.");
     return;
   }
 
-  //Creamos el objeto con la info
-  const nuevoComentario = new Comentario(nombre, correo, texto, valoracion);
+  // crear objeto comentario
+  let nuevo = new Comentario(nombre, correo, texto, valoracion);
 
-  //Mostrarlo en la consola (simula guardarlo)
-  nuevoComentario.mostrarEnConsola();
+  // guardar en el array
+  comentarios.push(nuevo);
 
-  // 💬 Feedback con alert
-  alert(`¡Gracias por tu comentario, ${nuevoComentario.nombre}! 💙`);
+  // depurar por consola
+  console.log("📋 Comentarios actuales:", comentarios);
 
-  // Preguntar si quiere dejar otro
-  const dejarOtro = prompt("¿Quieres dejar otro comentario? (sí/no)");
-  if (dejarOtro && dejarOtro.toLowerCase() === "sí") {
-    document.getElementById("sugerenciasForm").reset();
-  } else {
-    document.getElementById("mensajeExito").style.display = "block";
-  }
+  // actualizar la vista en pantalla
+  mostrarComentarios();
+
+  alert("💌 ¡Comentario enviado con éxito!");
+
+  // limpiar formulario
+  event.target.reset();
 }
 
-// Activar cuando cargue la página
+// ⚡ Evento principal cuando la página carga
 document.addEventListener("DOMContentLoaded", function () {
-  document
-    .getElementById("sugerenciasForm")
-    .addEventListener("submit", manejarFormulario);
+  let formulario = document.getElementById("sugerenciasForm");
+  formulario.addEventListener("submit", manejarFormulario);
 });

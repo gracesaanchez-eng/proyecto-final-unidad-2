@@ -301,3 +301,25 @@ body {
 .formulario-sugerencias button:hover {
   background-color: var(--azul);
 }
+.comentarios-lista {
+  margin-top: 30px;
+  padding: 15px;
+  border-top: 2px dashed var(--celeste);
+}
+
+.comentario-card {
+  background: #f0f7ff;
+  border: 1px solid #c5d6e8;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.comentario-card h4 {
+  margin: 0;
+  color: var(--azul);
+}
+
+.comentario-card p {
+  margin: 5px 0;
+}
