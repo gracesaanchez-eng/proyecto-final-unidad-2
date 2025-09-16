@@ -135,7 +135,7 @@
         </div>
 
         <div class="seguir">
-          <p>Síguenos:</p>
+          <h1>Síguenos:</h1>
           <a href="https://www.instagram.com/" target="_blank" class="instagram"
             >Instagram</a
           >
@@ -147,36 +147,50 @@
           >
         </div>
       </section>
+      <section class="formulario-sugerencias">
+        <h2>💌 Déjanos tu comentario</h2>
+
+        <form id="sugerenciasForm">
+          <label for="nombre">Nombre (opcional):</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre"
+          />
+
+          <label for="correo">Correo electrónico (opcional):</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="tucorreo@ejemplo.com"
+          />
+
+          <label for="comentario">Comentario / sugerencia:</label>
+          <textarea
+            id="comentario"
+            name="comentario"
+            required
+            placeholder="Escribe tu comentario aquí..."
+          ></textarea>
+
+          <label for="valoracion">Valoración general (1-5):</label>
+          <select id="valoracion" name="valoracion">
+            <option value="">--Selecciona--</option>
+            <option value="1">1 ⭐</option>
+            <option value="2">2 ⭐⭐</option>
+            <option value="3">3 ⭐⭐⭐</option>
+            <option value="4">4 ⭐⭐⭐⭐</option>
+            <option value="5">5 ⭐⭐⭐⭐⭐</option>
+          </select>
+
+          <button type="submit">Enviar comentario</button>
+        </form>
+
+        <div id="listaComentarios" class="comentarios-lista"></div>
+      </section>
     </main>
-    
-    <section class="formulario-sugerencias">
-  <h2>💌 Déjanos tu comentario</h2>
-
-  <form id="sugerenciasForm">
-    <label for="nombre">Nombre (opcional):</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
-
-    <label for="correo">Correo electrónico (opcional):</label>
-    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
-
-    <label for="comentario">Comentario / sugerencia:</label>
-    <textarea id="comentario" name="comentario" required placeholder="Escribe tu comentario aquí..."></textarea>
-
-    <label for="valoracion">Valoración general (1-5):</label>
-    <select id="valoracion" name="valoracion">
-      <option value="">--Selecciona--</option>
-      <option value="1">1 ⭐</option>
-      <option value="2">2 ⭐⭐</option>
-      <option value="3">3 ⭐⭐⭐</option>
-      <option value="4">4 ⭐⭐⭐⭐</option>
-      <option value="5">5 ⭐⭐⭐⭐⭐</option>
-    </select>
-
-    <button type="submit">Enviar comentario</button>
-  </form>
-
-  <div id="listaComentarios" class="comentarios-lista"></div>
-</section>
 
     <footer class="footer">
       <div class="footer-container">

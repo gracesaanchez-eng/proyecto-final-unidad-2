@@ -64,7 +64,6 @@ body {
   max-width: 1100px;
   text-align: justify;
   line-height: 1.8;
-  margin: 30px auto;
   color: var(--oscuro-azul);
 }
 
@@ -257,7 +256,7 @@ body {
   padding: 30px;
   margin: 50px auto;
   max-width: 600px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   font-family: "Libre Baskerville", serif;
 }
 
