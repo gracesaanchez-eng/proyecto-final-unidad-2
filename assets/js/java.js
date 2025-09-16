@@ -25,22 +25,22 @@ function manejarFormulario(event) {
   const texto = document.getElementById("comentario").value.trim();
   const valoracion = document.getElementById("valoracion").value;
 
-  // ✅ Validación con condicionales
+  // Validación con condicionales
   if (!texto) {
     alert("⚠️ Por favor escribe un comentario antes de enviar.");
     return;
   }
 
-  // ⚡ Creamos el objeto con la info
+  //Creamos el objeto con la info
   const nuevoComentario = new Comentario(nombre, correo, texto, valoracion);
 
-  // 📦 Mostrarlo en la consola (simula guardarlo)
+  //Mostrarlo en la consola (simula guardarlo)
   nuevoComentario.mostrarEnConsola();
 
   // 💬 Feedback con alert
   alert(`¡Gracias por tu comentario, ${nuevoComentario.nombre}! 💙`);
 
-  // 🧠 Bonus: preguntar si quiere dejar otro
+  // Preguntar si quiere dejar otro
   const dejarOtro = prompt("¿Quieres dejar otro comentario? (sí/no)");
   if (dejarOtro && dejarOtro.toLowerCase() === "sí") {
     document.getElementById("sugerenciasForm").reset();
@@ -49,7 +49,7 @@ function manejarFormulario(event) {
   }
 }
 
-// 🚀 Activar cuando cargue la página
+// Activar cuando cargue la página
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("sugerenciasForm")
